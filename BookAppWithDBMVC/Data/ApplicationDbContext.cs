@@ -1,0 +1,12 @@
+﻿using BookAppWithDBMVC.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace BookAppWithDBMVC.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        public DbSet<Book> Books { get; set; }
+    }
+}
